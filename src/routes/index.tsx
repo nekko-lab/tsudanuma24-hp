@@ -201,13 +201,14 @@ export default component$(() => {
                   </ul>
                 </Block>
               </div>
-              <Character
+              <div
                 class={css({
-                  margin: { lg: 0, base: "auto" },
+                  display: "flex",
+                  flexDir: "column",
+                  alignItems: "center",
                   opacity: 0,
                   transform: "translateX(-10px)",
-                  height: 500,
-                  width: "auto",
+                  minWidth: "354px",
                 })}
                 onQVisible$={(e) => {
                   animate(
@@ -220,7 +221,17 @@ export default component$(() => {
                     },
                   );
                 }}
-              />
+              >
+                <Character
+                  class={css({
+                    margin: { lg: 0, base: "auto" },
+                    height: 500,
+                    width: "auto",
+                  })}
+                  alt="キャラクター"
+                />
+                <p>illusted by 菓子工船</p>
+              </div>
             </div>
           </Section>
 
@@ -312,6 +323,7 @@ export default component$(() => {
                     overflow: "hidden",
                     width: { base: "full" },
                   })}
+                  alt="会場案内マップ"
                 />
                 <iframe
                   class={css({
@@ -320,6 +332,7 @@ export default component$(() => {
                     borderRadius: 5,
                     overflow: "hidden",
                   })}
+                  title="千葉工業大学のGoogle Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.479229660451!2d140.018525971287!3d35.689822914710305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602280271c38ab81%3A0x9b26ed71e15bb456!2z5Y2D6JGJ5bel5qWt5aSn5a2mIOa0peeUsOayvOOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1731421291588!5m2!1sja!2sjp"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
